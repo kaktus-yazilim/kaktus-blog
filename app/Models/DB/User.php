@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models\DB;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -9,6 +9,11 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+
+    public function routeNotificationForSlack()
+    {
+        return env('SLACK_WEBHOOK_URL');
+    }
     /**
      * The attributes that are mass assignable.
      *
