@@ -12,6 +12,7 @@
 */
 
 Route::get('/', function () {
+    App::setLocale('tr');
     return view('welcome');
 });
 

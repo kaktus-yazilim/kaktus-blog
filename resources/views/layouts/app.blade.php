@@ -73,7 +73,7 @@
 
         @yield('content')
     </div>
-
+    @extends('modals.feedbackModal')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
