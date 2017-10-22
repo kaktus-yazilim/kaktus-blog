@@ -40,7 +40,7 @@ class NewUser extends Notification
     public function toSlack($notifiable)
     {
         if ($this->user instanceof DB\User) {
-            $this->user = Map\User::mapUser($this->user);
+            $this->user = Map\User::map($this->user);
 
             if ($this->user instanceof Entity\User) {
                 $url = url('/user/' . $this->user->getUserName());

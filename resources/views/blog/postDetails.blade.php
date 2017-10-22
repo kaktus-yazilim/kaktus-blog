@@ -1,10 +1,10 @@
 @extends('blog.main')
-
+@section('title' , $post['title'])
 @section('contentBlog')
-    <div class="blog-post-3-hero">
+    <div class="blog-post-3-hero" style="background-image: url({{ $post['headerImageUrl'] }});">
         <div class="container">
             <h1 class="customFadeInUp mx-auto">
-                5 ways to engage more customers in just a few weeks
+                {{ $post['title'] }}
             </h1>
         </div>
     </div>
@@ -13,11 +13,16 @@
         <div class="container">
             <div class="blog-post-header">
                 <div class="blog-post-author">
-                    <img src="images/uifaces/12.jpg">
-                    By <span>Carl Williams</span>
+                    <img data-trigger="zoomerang" src="{{ $post['authorImageUrl'] }}">
+                    <span> <a href="{{ $post['authorLink'] }}">{{ $post['authorFullName'] }}</a> </span>
                 </div>
                 <div class="blog-post-date">
-                    Date <span>14 August 2018</span>
+                    @lang('messages.publishing') <span data-toggle="tooltip"
+                                                       title="{{ $post['publishedDateFull'] }}">{{ $post['publishedDate'] }}</span><br>
+                    @lang('messages.number_of_reading') <span data-toggle="tooltip"
+                                                              title="{{ __('messages.view', ['count' => $post['viewCount']]) }}">{{ $post['viewCount'] }}</span><br>
+                    @lang('messages.comment_count') <span data-toggle="tooltip"
+                                                          title="{{ __('messages.have_comment', ['count' => $post['commentCount']]) }}">{{ $post['commentCount'] }}</span>
                 </div>
                 <div class="blog-post-share">
                     Share this post:
@@ -34,55 +39,25 @@
             </div>
 
             <div class="blog-post-content">
-                <p>
-                    Spacial is an advanced theme solution for desktop, tablet, and mobile devices. It works in all browsers and your clients can pay instantly, to improve their experience at all times anywhere they go. Pick the pages that describe your business the best and improve your users experience. Track your progress and learn along all the way.
-                </p>
-                <p>
-                    Spacial has both a web app and an android app to make your website easy and always available. It offers you all the designs in collaboration with some smart people. Your projects will look great everywhere you go. Use new components that come include.
-                <p>
-                    Spacial is designed to make showing off your best projects extremely fast and simple. There are many ways to configure. Just go to the source, make changes and the rest is taken care automatically.
-                </p>
+                {!! $post['content']  !!}
                 <div class="blog-post-quote-wrapper">
                     <div class="quote">
-                        Spacial is the perfect solution for web developers and designers. You can get an awesome website for your best projects and clients, and also get support!
+                        Spacial is the perfect solution for web developers and designers. You can get an awesome website
+                        for your best projects and clients, and also get support!
                     </div>
                     <div class="author">
                         Jessica Jones, Founder/CEO
                     </div>
                 </div>
-                <p>
-                    Spacial is an advanced theme solution for desktop, tablet, and mobile devices. <a href="#">It works in all browsers</a> and your clients can pay instantly, to improve their experience at all times anywhere they go. Pick the pages that describe your business the best and improve your users experience. Track your progress and learn along all the way.
-                </p>
-                <h2>
-                    Full of features
-                </h2>
-                <p>
-                    Spacial has both a web app and an android app to make your website easy and always available. It offers you all the designs in collaboration with some smart people. Your projects will look great everywhere you go. Use new components that come included!
-                </p>
-                <p>
-                    It is designed to make showing off your best projects extremely fast and simple. There are many ways to configure. Just go to the source, make changes and the rest is taken care automatically.
-                </p>
-                <p>
-                    Focus on creating and growing your projects and websites, and we‘ll take care of spinning up new designs for your users and making sure they’re great. Work with all types of customers right out of the box while still getting paid in your preferred currency.
-                </p>
                 <div class="blog-post-side-image clearfix">
-                    <img data-trigger="zoomerang" src="images/unsplash/photo-1478059425650-ca13d6d422f4.jpg" class="img-responsive">
+                    <img data-trigger="zoomerang" src="images/unsplash/photo-1478059425650-ca13d6d422f4.jpg"
+                         class="img-responsive">
                     <p>
-                        Millions of people use this theme. Each of them use it differently. So we created fifteen incredible new designs, some in collaboration with a few of the world's most influential and carismatic people ever known. Pick the pages that describe your business the best.
+                        Millions of people use this theme. Each of them use it differently. So we created fifteen
+                        incredible new designs, some in collaboration with a few of the world's most influential and
+                        carismatic people ever known. Pick the pages that describe your business the best.
                     </p>
                 </div>
-                <p>
-                    Spacial is an advanced theme solution for desktop, tablet, <a href="#">and mobile devices</a>. It works in all browsers and your clients can pay instantly, to improve their experience at all times anywhere they go.
-                </p>
-                <h2>
-                    Wrapping up
-                </h2>
-                <p>
-                    Spacial is an advanced theme solution for desktop, tablet, and mobile devices. It works in all browsers and your clients can pay instantly, to improve their experience at all times anywhere they go. Pick the pages that describe your business the best and improve your users experience. Track your progress and learn along all the way.
-                </p>
-                <p>
-                    Focus on creating and growing your projects and websites, and we‘ll take care of spinning up new designs for your users and making sure they’re great. Work with all types of customers right out of the box while still getting paid in your preferred currency.
-                </p>
             </div>
         </div>
     </div>

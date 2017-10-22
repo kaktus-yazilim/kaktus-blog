@@ -9,31 +9,19 @@ class User
 {
 
     /**
-     * @param DB\User $userData
+     * @param DB\User $user
      * @return Entity\User
      */
-    public static function mapUser(DB\User $userData)
+    public static function map(DB\User $user)
     {
-        $user = new Entity\User;
+        $entityUser = new Entity\User;
 
-        $user->setId($userData->id);
-        $user->setUserName($userData->user_name);
-        $user->setEmail($userData->email);
-
-        if (isset($userData->first_name) && isset($userData->last_name)) {
-            $user->setFirstName($userData->first_name);
-            $user->setLastName($userData->last_name);
-            $user->setFullName($user->getFirstName() . ' ' . $user->getLastName());
+        foreach (Entity\User::COLUMNS as $column => $value) {
+            if (isset($user->$column)) {
+                $entityUser->$value($user->$column);
+            }
         }
 
-        if (isset($userData->created_at)) {
-            $user->setCreatedAt($userData->created_at);
-        }
-
-        if (isset($userData->updated_at)) {
-            $user->setUpdatedAt($userData->updated_at);
-        }
-
-        return $user;
+        return $entityUser;
     }
 }

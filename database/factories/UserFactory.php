@@ -21,7 +21,8 @@ $factory->define(App\Models\DB\User::class, function (Faker $faker) {
         'last_name' => $faker->lastName,
         'user_name' => $faker->unique()->userName,
         'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
+        'password' => $password ?: $password = bcrypt('1'),
         'remember_token' => str_random(10),
+        'photo' => 'images/uifaces/eren.jpg'
     ];
 });

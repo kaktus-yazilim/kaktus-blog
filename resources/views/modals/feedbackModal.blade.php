@@ -23,24 +23,24 @@
                     </button>
                 </div>
                 <div class="modal-body"><p>Taze Mürekkep'i her gün daha kullanıcı dostu yapmaya çalışıyoruz. Daha doğrusunu
-                        yapabilmek için geribildirimlerinize her zaman açığız</p>
-                    <div class="form-group"><label for="txtFeedbackMessage">Mesajınız *</label> <textarea
+                        yapabilmek için geribildirimlerine ihtiyacımız var.</p>
+                    <div class="form-group"><label for="txtFeedbackMessage">Mesajın *</label> <textarea
                                 required="required" rows="3" id="txtFeedbackMessage"
-                                placeholder="Ne söylerseniz dinlemeye hazırız, bu durumda okumaya dememiz gerekiyor tabii :)"
+                                placeholder="Ne söylersen dinlemeye hazırız, bu durumda okumaya dememiz gerekiyor tabii :)"
                                 class="form-control"></textarea></div>
-                    <div class="form-group"><label for="feedbackPageUrl">Bulunduğunuz Sayfa *</label> <input
+                    <div class="form-group"><label for="feedbackPageUrl">Bulunduğun Sayfa *</label> <input
                                 id="feedbackPageUrl" type="text" value="{{url()->full()}}" disabled="disabled"
                                 class="form-control">
-                        <p class="help-block">Bunu hangi sayfadayken yazdığınızı bilelim diye biz ekledik, bunu
-                            bileceğimizi bilin diye size de gösterelim dedik</p></div>
+                        <p class="help-block">Bunu hangi sayfadayken yazdığını bilelim diye biz ekledik, bunu
+                            bileceğimizi bil diye sana da gösterelim dedik</p></div>
                     <div class="form-group">
-                        <label for="feedbackEmail">E-Postanız</label>
+                        <label for="feedbackEmail">E-Postan</label>
                         @auth
                             <input id="feedbackEmail" type="email" value="{{Auth::user()->email}}" class="form-control">
-                            <p class="help-block">Merak etmeyin giriş yaptığınız için biz sizin yerinize doldurduk :)</p>
+                            <p class="help-block">Merak etme giriş yaptığın için biz senin yerine doldurduk :)</p>
                             @else
                                 <input id="feedbackEmail" type="email" placeholder="E-Postanız" class="form-control">
-                                <p class="help-block">Şart değil ama size yanıt vermemiz gerekiyorsa yazın tabii</p>
+                                <p class="help-block">Şart değil ama sana yanıt vermemiz gerekiyorsa yaz tabii</p>
                                 @endauth
                     </div>
 

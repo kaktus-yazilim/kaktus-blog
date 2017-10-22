@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Manager\Post;
 use Illuminate\Support\Facades\App;
 
 class HomeController extends Controller

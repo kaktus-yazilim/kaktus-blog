@@ -4,12 +4,23 @@ namespace App\Models\Entity;
 
 class User
 {
+    const COLUMNS = [
+        'id' => 'setId',
+        'user_name' => 'setUserName',
+        'email' => 'setEmail',
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
+        'photo' => 'setPhoto',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt'
+    ];
+
     private $id;
     private $userName;
     private $email;
     private $firstName;
     private $lastName;
-    private $fullName;
+    private $photo;
     private $createdAt;
     private $updatedAt;
 
@@ -98,15 +109,7 @@ class User
      */
     public function getFullName()
     {
-        return $this->fullName;
-    }
-
-    /**
-     * @param mixed $fullName
-     */
-    public function setFullName($fullName)
-    {
-        $this->fullName = $fullName;
+        return $this->firstName . ' ' . $this->lastName;
     }
 
     /**
@@ -141,4 +144,19 @@ class User
         $this->updatedAt = $updatedAt;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * @param mixed $photo
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+    }
 }

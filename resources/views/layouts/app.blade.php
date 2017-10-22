@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Taze Mürekkep</title>
+    <title> @yield('title') | Taze Mürekkep</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -38,6 +38,15 @@
 <body @yield('bodyClass')>
 @yield('content')
 @include('modals.feedbackModal')
+<div id="search">
+    <button type="button" class="close">×</button>
+    <form>
+        <h3>Get Set...</h3>
+        <input type="search" value="" placeholder="type keyword(s) here" />
+        <button type="submit" class="btn btn-success">Go for Search</button>
+    </form>
+</div>
+<script src="{{asset('js/kb.js')}}"></script>
 </body>
 </html>
 

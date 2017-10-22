@@ -3,16 +3,22 @@
 namespace App\Http\Controllers\Blog;
 
 use App\Http\Controllers\Controller;
+use App\Models\Manager\Post;
 
 class MainController extends Controller
 {
     public function index()
     {
-        return view('blog.postList');
+        $posts = Post::getAllForMainPage();
+
+        return view('blog.postList', [
+            'posts' => $posts
+        ]);
     }
 
-    public function postDetails($id)
+    public function postDetails($url)
     {
-        return view('blog.postDetails', ['id' => $id]);
+        $post = Post::getDetailsByUrl($url);
+        return view('blog.postDetails', ['post' => $post]);
     }
 }
