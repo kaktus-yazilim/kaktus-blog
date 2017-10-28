@@ -39,10 +39,6 @@
                         </div>
                     </div>
                 </li>
-
-                <li class="nav-item">
-                    <a href="#search"><i class="fa fa-search"></i></a>
-                </li>
                 @if (Route::currentRouteName() != 'blog')
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('blog') }}"><i class="fa fa-book"></i>Blog</a>

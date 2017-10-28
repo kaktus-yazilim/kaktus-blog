@@ -8,7 +8,6 @@ use App\Models\Helper\Date;
 
 class Post extends Base
 {
-
     /**
      * @param DB\Post $post
      * @return Entity\Post

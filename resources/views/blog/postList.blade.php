@@ -87,7 +87,7 @@
                 Günün Sözü
             </h1>
             <p>
-                ya olduğun gibi görün yada göründüğün gibi ol ama bana farketmez hacı
+                ya olduğun gibi görün yada göründüğün gibi ama bana farketmez hacı
             </p>
         </div>
     </div>

@@ -21,6 +21,7 @@ class User
     private $firstName;
     private $lastName;
     private $photo;
+    private $userLink;
     private $createdAt;
     private $updatedAt;
 
@@ -158,5 +159,13 @@ class User
     public function setPhoto($photo)
     {
         $this->photo = $photo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUserLink()
+    {
+        return $this->userLink;
     }
 }

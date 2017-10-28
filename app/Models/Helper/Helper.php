@@ -31,7 +31,7 @@ trait Helper
      */
     public static function getAppUrl()
     {
-        return 'http://127.0.0.1:8000/';
+        return env('APP_URL');
     }
 
     /**
@@ -69,7 +69,7 @@ trait Helper
 
     /**
      * @param $date
-     * @return Carbon|static
+     * @return Carbon
      */
     public static function parseCarbon($date)
     {

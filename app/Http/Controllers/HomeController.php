@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Manager\Post;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        Auth::user();
         App::setLocale('tr');
         return view('home');
     }

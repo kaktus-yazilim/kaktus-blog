@@ -38,15 +38,15 @@
 <body @yield('bodyClass')>
 @yield('content')
 @include('modals.feedbackModal')
-<div id="search">
+<!--<div id="search">
     <button type="button" class="close">×</button>
-    <form>
+    <form class="form-horizontal" method="POST" action="">
         <h3>Get Set...</h3>
         <input type="search" value="" placeholder="type keyword(s) here" />
         <button type="submit" class="btn btn-success">Go for Search</button>
     </form>
 </div>
-<script src="{{asset('js/kb.js')}}"></script>
+-->
 </body>
 </html>
 
