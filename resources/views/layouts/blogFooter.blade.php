@@ -1,83 +1,74 @@
-<footer class="footer">
+<footer class="footer-big-menu" id="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="title">
-                    About spacial
-                </div>
-                <ul class="menu">
-                    <li>
-                        <a href="#">Home Pages</a>
-                    </li>
-                    <li>
-                        <a href="#">Theme Features</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">StoreFront</a>
-                    </li>
-                    <li>
-                        <a href="#">Portfolio</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <div class="title">
-                    Connect with us
-                </div>
-                <ul class="menu">
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-instagram"></i>
-                            Instagram
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-twitter"></i>
-                            Twitter
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-dribbble"></i>
-                            Dribbble
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-facebook"></i>
-                            Facebook
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4 newsletter">
-                <div class="title">
-                    Get awesome updates
-                </div>
-                <p>
-                    Enter your email address for news and product launches in the Awesome Space.
-                </p>
+            <div class="col-12">
+                <div class="cta subscribe text-center">
+                    <h1 class="cta-title">
+                        <span data-animate="fadeIn">Bizden</span>
+                        <span data-animate="fadeIn" data-animate-delay=".4">haber</span>
+                        <span data-animate="fadeIn" data-animate-delay=".9">almak</span>
+                        <span data-animate="fadeIn" data-animate-delay="1.4">çok</span>
+                        <span data-animate="fadeIn" data-animate-delay="1.8">kolay.</span>
+                    </h1>
+                    <form>
+                        <input class="" type="text" name="email" placeholder="E-Mail Adresin">
+                        <button type="submit" class="btn-shadow btn-shadow-info mr-md-1">
+                            Takip Et
+                        </button>
+                    </form>
 
-                <form class="newsletter-form" autocomplete="off">
-                    <input type="email" id="mc-email" class="form-control" placeholder="Email address" required />
-
-                    <button type="submit">
-                        <i class="fa fa-chevron-right"></i>
-                    </button>
-                    <label for="mc-email" class="text-white newsletter-feedback mt-3"></label>
-                </form>
+                </div>
             </div>
         </div>
-        <div class="bottom">
-            <ul>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Legal</a></li>
-                <li><a href="#">Language</a></li>
-            </ul>
+        <div class="row menu">
+            <div class="col-md-3 col-lg-2">
+                <h3 class="menu-title">Products</h3>
+                <a class="menu-link" href="#">Spacial Enterprise</a>
+                <a class="menu-link" href="#">Spacial Healthcare</a>
+                <a class="menu-link" href="#">Spacial Security</a>
+            </div>
+            <div class="col-md-3 col-lg-2">
+                <h3 class="menu-title">Features</h3>
+                <a class="menu-link" href="#">Employees</a>
+                <a class="menu-link" href="#">Integrations</a>
+                <a class="menu-link" href="#">Subscriptions</a>
+                <a class="menu-link" href="#">Online payments</a>
+                <a class="menu-link" href="#">Antifraud system</a>
+                <a class="menu-link" href="#">Pricing</a>
+            </div>
+            <div class="col-md-3 col-lg-2">
+                <h3 class="menu-title">Resources</h3>
+                <a class="menu-link" href="#">Support center</a>
+                <a class="menu-link" href="#">Documentation</a>
+                <a class="menu-link" href="#">API reference</a>
+                <a class="menu-link" href="#">Customer stories</a>
+            </div>
+            <div class="col-md-3 col-lg-2">
+                <h3 class="menu-title">About</h3>
+                <a class="menu-link" href="#">What we believe</a>
+                <a class="menu-link" href="#">Careers</a>
+                <a class="menu-link" href="#">Partners</a>
+                <a class="menu-link" href="#">Press kit</a>
+                <a class="menu-link" href="#">Media</a>
+            </div>
+            <div class="col-md-3 col-lg-2">
+                <h3 class="menu-title">Get in touch</h3>
+                <a class="menu-link" href="#">support@spacial.com</a>
+                <a class="menu-link" href="#">(123) 455-1123</a>
+                <a class="menu-link" href="#">9am - 6pm CST</a>
+            </div>
+            <div class="col-md-3 col-lg-2 text-center">
+                <a class="social-link" href="#">
+                    <i class="ion-social-twitter"></i>
+                </a>
+                <a class="social-link" href="#">
+                    <i class="ion-social-facebook"></i>
+                </a>
+                <a class="social-link" href="#">
+                    <i class="ion-social-instagram"></i>
+                </a>
+            </div>
         </div>
     </div>
+    <span class="bottom">© 2017 Taze Mürekkep Tüm Hakları Saklıdır. <a href="#">Kullanım Koşulları</a></span>
 </footer>

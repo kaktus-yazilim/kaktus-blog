@@ -40,7 +40,7 @@ class Post extends Base
             'authorLink' => self::getUserLink($post->getAuthor()->getUserName()),
             'authorImage' => $post->getAuthor()->getPhoto(),
             'viewCount' => $post->getViewCount(),
-            'new' => self::isToday($post->getPublishedDate())
+            'new' => self::isTodayControl($post->getPublishedDate())
         ];
     }
 
@@ -65,6 +65,19 @@ class Post extends Base
             'authorFullName' => $post->getAuthor()->getFullName(),
             'authorImageUrl' => $post->getAuthor()->getPhoto(),
             'authorLink' => self::getUserLink($post->getAuthor()->getUserName())
+        ];
+    }
+
+    /**
+     * @param Entity\Post $post
+     * @return array
+     */
+    public static function mapOnlyTitleAndDescription(Entity\Post $post)
+    {
+        return [
+            'title' => $post->getTitle(),
+            'description' => $post->getDescription(),
+            'postLink' => self::getPostLink($post->getUrl()),
         ];
     }
 }

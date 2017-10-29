@@ -56,7 +56,7 @@ trait Helper
      * @param $date
      * @return bool|string
      */
-    public static function isToday($date)
+    public static function isTodayControl($date)
     {
         $date = self::parseCarbon($date);
 

@@ -2,9 +2,9 @@
 
 namespace App\Models\Map;
 
-use App\Models\Helper\Helper;
+use App\Models;
 
-class Base
+class Base extends Models\Base
 {
-    use Helper;
+
 }

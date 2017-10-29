@@ -3,6 +3,8 @@
 namespace App\Models\Entity;
 
 
+use App\Models\Helper\Date;
+
 class Post
 {
     const POST_STATUS_PUBLISHED = 'published';
@@ -230,7 +232,7 @@ class Post
     }
 
     /**
-     * @return mixed
+     * @return Date
      */
     public function getPublishedDate()
     {

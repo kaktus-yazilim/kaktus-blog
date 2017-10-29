@@ -40,12 +40,24 @@
     <div class="blog-sidebar-header">
         <div class="container">
             <div class="categories">
-                <a href="#">Kültür</a>
-                <a href="#">Bilim</a>
-                <a href="#">Eğlence</a>
-                <a href="#">Yaşam</a>
-                <a href="#">Spor</a>
-                <a href="#">Haber</a>
+                <a href="">
+                    <span data-animate="fadeIn">Kültür</span>
+                </a>
+                <a href="">
+                    <span data-animate="fadeIn" data-animate-delay=".2">Bilim</span>
+                </a>
+                <a href="">
+                    <span data-animate="fadeIn" data-animate-delay=".4">Eğlence</span>
+                </a>
+                <a href="">
+                    <span data-animate="fadeIn" data-animate-delay=".6">Yaşam</span>
+                </a>
+                <a href="">
+                    <span data-animate="fadeIn" data-animate-delay=".8">Spor</span>
+                </a>
+                <a href="">
+                    <span data-animate="fadeIn" data-animate-delay="1">Haber</span>
+                </a>
             </div>
             <a href="" class="hello">
                 <span data-animate="fadeIn">Merhaba</span>
@@ -74,7 +86,8 @@
                             @endif
                             {{$post['title']}}</span>
                         <span class="author">{{ $post['authorFullName'] }}</span>
-                        <span class="read"><i class="fa fa-eye"></i> {{ __('messages.view', ['count' => $post['viewCount']]) }}</span>
+                        <span class="read"><i
+                                    class="fa fa-eye"></i> {{ __('messages.view', ['count' => $post['viewCount']]) }}</span>
                     </a>
                 </div>
             @endforeach
@@ -106,7 +119,8 @@
                                     {{ $post['title'] }}
                                 </div>
                                 <div class="post-min-read">
-                                    {{ $post['authorFullName'] }} | {{ __('messages.view', ['count' => $post['viewCount']]) }}
+                                    {{ $post['authorFullName'] }}
+                                    | {{ __('messages.view', ['count' => $post['viewCount']]) }}
                                 </div>
                                 <p class="post-description">
                                     {{ $post['description'] }}
@@ -128,7 +142,8 @@
                             <div class="card-img-overlay">
                                 <h4 class="card-title mt-3">{{ $post['title'] }}</h4>
                                 <p class="card-text">{{ $post['description'] }}</p>
-                                <p class="card-text">  {{ $post['authorFullName'] }} | </p>
+                                <p class="card-text">  {{ $post['authorFullName'] }}
+                                    | {{ __('messages.view', ['count' => $post['viewCount']]) }}</p>
                                 <button class="btn-shadow btn-shadow-info mt-3">Yazıya Git</button>
                             </div>
                         </div>
@@ -141,12 +156,22 @@
         <div class="container">
             <div class="cta my-4 py-4">
                 <h3>
-                    Start engaging with your customers and earn more
+                    <span data-animate="fadeIn">Serüvenimize</span>
+                    <span data-animate="fadeIn" data-animate-delay=".4">katılmak</span>
+                    <span data-animate="fadeIn" data-animate-delay=".9">ister</span>
+                    <span data-animate="fadeIn" data-animate-delay="1.4">misin?</span>
+
                 </h3>
                 <p>
-                    Try our free trial for 30 days, no credit card required
+                    <span data-animate="fadeIn">Senin</span>
+                    <span data-animate="fadeIn" data-animate-delay=".2">için</span>
+                    <span data-animate="fadeIn" data-animate-delay=".4">her</span>
+                    <span data-animate="fadeIn" data-animate-delay=".6">zaman</span>
+                    <span data-animate="fadeIn" data-animate-delay=".8">boş</span>
+                    <span data-animate="fadeIn" data-animate-delay="1">yerimiz</span>
+                    <span data-animate="fadeIn" data-animate-delay="1.2">var.</span>
                 </p>
-                <a href="#">Create an account</a>
+                <a href="#">Şimdi Bize Katıl</a>
             </div>
         </div>
     </div>

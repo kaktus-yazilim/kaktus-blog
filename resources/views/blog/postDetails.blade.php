@@ -14,26 +14,30 @@
             <div class="blog-post-header">
                 <div class="blog-post-author">
                     <img data-trigger="zoomerang" src="{{ $post['authorImageUrl'] }}">
-                    <span> <a href="{{ $post['authorLink'] }}">{{ $post['authorFullName'] }}</a> </span>
+                    <span> <a href="{{ $post['authorLink'] }}">{{ $post['authorFullName'] }}</a> <br>
+                    </span>
                 </div>
                 <div class="blog-post-date">
-                    @lang('messages.publishing') <span data-toggle="tooltip"
-                                                       title="{{ $post['publishedDateFull'] }}">{{ $post['publishedDate'] }}</span><br>
-                    @lang('messages.number_of_reading') <span data-toggle="tooltip"
-                                                              title="{{ __('messages.view', ['count' => $post['viewCount']]) }}">{{ $post['viewCount'] }}</span><br>
-                    @lang('messages.comment_count') <span data-toggle="tooltip"
-                                                          title="{{ __('messages.have_comment', ['count' => $post['commentCount']]) }}">{{ $post['commentCount'] }}</span>
+                        @lang('messages.publishing') <span data-toggle="tooltip"
+                                                           title="{{ $post['publishedDateFull'] }}">{{ $post['publishedDate'] }}</span>
+                        @lang('messages.number_of_reading') <span data-toggle="tooltip"
+                                                                  title="{{ __('messages.view', ['count' => $post['viewCount']]) }}">{{ $post['viewCount'] }}</span>
+                        @lang('messages.comment_count') <span data-toggle="tooltip"
+                                                              title="{{ __('messages.have_comment', ['count' => $post['commentCount']]) }}">{{ $post['commentCount'] }}</span>
                 </div>
                 <div class="blog-post-share">
-                    Share this post:
-                    <a href="#">
+                    <a target="_blank" href="https://twitter.com/home?status={{ $post['postLink'] }}">
                         <i class="ion-social-twitter"></i>
                     </a>
-                    <a href="#">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ $post['postLink'] }}">
                         <i class="ion-social-facebook"></i>
                     </a>
-                    <a href="#">
-                        <i class="ion-social-buffer"></i>
+                    <a target="_blank"
+                       href="https://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source={{ $post['postLink'] }}">
+                        <i class="ion-social-linkedin"></i>
+                    </a>
+                    <a target="_blank" href="https://plus.google.com/share?url={{ $post['postLink'] }}">
+                        <i class="ion-social-googleplus"></i>
                     </a>
                 </div>
             </div>
@@ -62,37 +66,40 @@
         </div>
     </div>
 
+
     <div class="blog-post-3-footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="story story--left">
-                        <h3>
-                            Hiking in the Himalayas for a month
-                        </h3>
-                        <p>
-                            Pick the pages that describe your business the best and improve your users experience.
-                        </p>
-                        <a href="#">
-                            <i class="ion-ios-arrow-thin-left"></i>
-                            Previous story
-                        </a>
+                @if(count($post['randomPostList']) > 1)
+                    <div class="col-sm-6">
+                        <div class="story story--left">
+                            <h3>
+                                {{ $post['randomPostList'][0]['title'] }}
+                            </h3>
+                            <p>
+                                {{ $post['randomPostList'][0]['description'] }}
+                            </p>
+                            <a href="#">
+                                <i class="ion-ios-arrow-thin-left"></i>
+                                Previous story
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="story story--right">
-                        <h3>
-                            The best cultures around the world
-                        </h3>
-                        <p>
-                            Pick the pages that describe your business the best and improve your users experience.
-                        </p>
-                        <a href="#">
-                            Next story
-                            <i class="ion-ios-arrow-thin-right"></i>
-                        </a>
+                    <div class="col-sm-6">
+                        <div class="story story--right">
+                            <h3>
+                                {{ $post['randomPostList'][1]['title'] }}
+                            </h3>
+                            <p>
+                                {{ $post['randomPostList'][1]['description'] }}
+                            </p>
+                            <a href="#">
+                                Next story
+                                <i class="ion-ios-arrow-thin-right"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                @endif
             </div>
         </div>
 

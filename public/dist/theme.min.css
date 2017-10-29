@@ -15376,7 +15376,7 @@ img.mfp-img {
 }
 
 .footer-big-menu {
-    margin-top: 120px;
+   // margin-top: 120px;
     padding: 80px 0 130px;
     background: #2b4255;
     position: relative
@@ -16950,6 +16950,67 @@ body {
     -o-transition: all .15s linear;
     transition: all .15s linear
 }
+.cta .btn-outline {
+    text-transform: uppercase;
+    color: #d3d9fa;
+    border: 2px solid #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 15px 29px;
+    border-radius: 45px;
+    margin-left: 30px;
+    letter-spacing: .5px;
+    text-decoration: none;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+    transition: all .15s linear
+}
+
+@media (max-width: 767px) {
+    .cta .btn-outline {
+        margin-left: 15px
+    }
+}
+
+.cta .btn-outline:hover {
+    background: #fff;
+    color: #333
+}
+
+.cta .btn-outline:hover .fa-play {
+    color: #333
+}
+
+.cta .btn-outline:active {
+    position: relative;
+    top: 1px
+}
+
+.cta .btn-outline .fa-play {
+    margin-right: 9px;
+    color: #d3d9fa;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+    transition: all .15s linear
+}
+.cta .btn-primary {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 17px 32px;
+    letter-spacing: .5px;
+    background-color: #57b8f8;
+    border: 1px solid #57b8f8;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+    transition: all .15s linear;
+}
 
 .index-header section .mobile-pic {
     position: absolute;
@@ -17035,7 +17096,7 @@ body {
 .index-intro section p {
     margin-top: 17px;
     line-height: 24px;
-    width: 90%;
+    //width: 90%;
     color: #555
 }
 
@@ -17723,7 +17784,7 @@ body {
     line-height: 25px;
     font-size: 15px;
     margin-top: 15px;
-    width: 87%
+    //width: 87%
 }
 
 @media (max-width: 767px) {
@@ -27146,6 +27207,35 @@ body {
 }
 
 .blog-post-subscribe form input:focus {
+    border-color: #333
+}
+
+.subscribe input {
+    outline: 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #d8d8d8;
+    position: relative;
+    top: 1px;
+    width: 230px;
+    font-size: 16px;
+    margin-right: 20px;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s
+}
+
+@media (max-width: 767px) {
+    .subscribe form input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px
+    }
+}
+
+.subscribe form input:focus {
     border-color: #333
 }
 

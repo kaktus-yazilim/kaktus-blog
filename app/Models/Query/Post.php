@@ -15,7 +15,7 @@ class Post
      */
     public static function getAllPublished()
     {
-        return DB\Post::with('author')
+        return DB\Post::with(self::RELATION_AUTHOR)
             ->where('status', Entity\Post::POST_STATUS_PUBLISHED)
             ->where('deleted', Entity\Post::UN_DELETED)
             ->where('private', Entity\Post::NO_PRIVATE)
@@ -30,7 +30,7 @@ class Post
      */
     public static function getByUrl($url)
     {
-        return DB\Post::with('author')
+        return DB\Post::with(self::RELATION_AUTHOR)
             ->where('url', $url)
             ->where('private', Entity\Post::NO_PRIVATE)
             ->where('deleted', Entity\Post::UN_DELETED)
@@ -41,7 +41,8 @@ class Post
     {
         return DB\Post::where('private', Entity\Post::NO_PRIVATE)
             ->where('deleted', Entity\Post::UN_DELETED)
-            ->random($limit)
+            ->inRandomOrder()
+            ->take($limit)
             ->get();
     }
 }

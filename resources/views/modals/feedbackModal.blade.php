@@ -10,7 +10,7 @@
         border-radius: 5px 5px 0 0;
     }
 </style>
-<button id="feedbackButton" class="btn-pill btn-pill-primary btn-pill-lg" data-toggle="modal" data-target=".feedback-modal">@lang('messages.feedback')</button>
+<button id="feedbackButton" class="btn btn-light" data-toggle="modal" data-target=".feedback-modal">@lang('messages.feedback')</button>
 <div class="modal fade feedback-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-lg">

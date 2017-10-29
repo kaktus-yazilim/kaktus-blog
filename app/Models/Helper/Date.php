@@ -3,7 +3,9 @@
 namespace App\Models\Helper;
 
 
-class Date
+use Carbon\Carbon;
+
+class Date extends Carbon
 {
     use Helper;
 
@@ -12,6 +14,7 @@ class Date
     const DATE_BASIC_FULL = 'Y-m-d H:i:s';
     const DATE_BASIC = 'Y-m-d';
     const ATOM = '%A %d %B %Y';
+    const DAY_MONTH = '%d %B';
 
     /**
      * @param $date
