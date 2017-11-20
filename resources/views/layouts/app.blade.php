@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('dist/theme.min.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/kaktus.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/tooltip.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('fonts/font-awesome/css/font-awesome.min.css') }}"/>
 
     <!-- javascript -->

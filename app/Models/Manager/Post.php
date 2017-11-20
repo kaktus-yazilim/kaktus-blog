@@ -56,16 +56,21 @@ class Post extends Base
         $entityPost = Map\Helper::mapSingle($dbPost);
         $mapPost = Map\Post::mapShapePostDetails($entityPost);
 
-        //random post list
-        $randomPosts = Map\Helper::mapList(Query\Post::getRandom(2));
+        $randomPosts = self::getRandomPostWithCount(2);
         $randomPostList = [];
-        foreach($randomPosts as $post) {
+        foreach ($randomPosts as $post) {
             $randomPostList[] = Map\Post::mapOnlyTitleAndDescription($post);
         }
         $mapPost['randomPostList'] = $randomPostList;
 
-
         return $mapPost;
+    }
+
+    public static function getRandomPostWithCount($value)
+    {
+        $randomPosts = Map\Helper::mapList(Query\Post::getRandom($value));
+
+        return $randomPosts;
     }
 
 }

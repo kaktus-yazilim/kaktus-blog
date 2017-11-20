@@ -18,12 +18,17 @@
                     </span>
                 </div>
                 <div class="blog-post-date">
-                        @lang('messages.publishing') <span data-toggle="tooltip"
-                                                           title="{{ $post['publishedDateFull'] }}">{{ $post['publishedDate'] }}</span>
-                        @lang('messages.number_of_reading') <span data-toggle="tooltip"
-                                                                  title="{{ __('messages.view', ['count' => $post['viewCount']]) }}">{{ $post['viewCount'] }}</span>
-                        @lang('messages.comment_count') <span data-toggle="tooltip"
-                                                              title="{{ __('messages.have_comment', ['count' => $post['commentCount']]) }}">{{ $post['commentCount'] }}</span>
+                    @lang('messages.publishing') <span data-tooltip="{{ $post['publishedDateFull'] }}">
+                        {{ $post['publishedDate'] }}
+                    </span>
+                    @lang('messages.number_of_reading') <span
+                            data-tooltip="{{ __('messages.view', ['count' => $post['viewCount']]) }}">
+                        {{ $post['viewCount'] }}
+                    </span>
+                    @lang('messages.comment_count') <span
+                            data-tooltip="{{ __('messages.have_comment', ['count' => $post['commentCount']]) }}">
+                        {{ $post['commentCount'] }}
+                    </span>
                 </div>
                 <div class="blog-post-share">
                     <a target="_blank" href="https://twitter.com/home?status={{ $post['postLink'] }}">
@@ -79,7 +84,7 @@
                             <p>
                                 {{ $post['randomPostList'][0]['description'] }}
                             </p>
-                            <a href="#">
+                            <a href="{{ $post['randomPostList'][0]['postLink'] }}">
                                 <i class="ion-ios-arrow-thin-left"></i>
                                 Previous story
                             </a>
@@ -93,7 +98,7 @@
                             <p>
                                 {{ $post['randomPostList'][1]['description'] }}
                             </p>
-                            <a href="#">
+                            <a href="{{ $post['randomPostList'][1]['postLink'] }}">
                                 Next story
                                 <i class="ion-ios-arrow-thin-right"></i>
                             </a>

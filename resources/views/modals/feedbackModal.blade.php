@@ -37,7 +37,7 @@
                         <label for="feedbackEmail">E-Postan</label>
                         @auth
                             <input id="feedbackEmail" type="email" value="{{Auth::user()->email}}" class="form-control">
-                            <p class="help-block">Merak etme giriş yaptığın için biz senin yerine doldurduk :)</p>
+                            <p class="help-block">Merak etme giriş yaptığın için biz senin yerine doldurduk :) Dilersen silebilirsin tabii</p>
                             @else
                                 <input id="feedbackEmail" type="email" placeholder="E-Postanız" class="form-control">
                                 <p class="help-block">Şart değil ama sana yanıt vermemiz gerekiyorsa yaz tabii</p>

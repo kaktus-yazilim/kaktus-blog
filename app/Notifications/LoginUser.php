@@ -45,13 +45,21 @@ class LoginUser extends Notification
     {
         if ($this->user instanceof DB\User) {
             $this->user = Map\User::map($this->user);
+            $url = url('/user/' . $this->user->getUserName());
 
             if ($this->user instanceof Entity\User) {
                 return (new SlackMessage)
                     ->from(Helper\Slack::SLACK_NOTIFICATION_DEFAULT_USER, Helper\Slack::SLACK_NOTIFICATION_DEFAULT_USER_ICON)
                     ->to(Helper\Slack::SLACK_CHANNEL_LOGIN_USER)
                     ->success()
-                    ->content($this->user->getUserName() . ' logged in.');
+                    ->attachment(function ($attachment) use ($url) {
+                        $attachment->title('A new user logged in: ' . $this->user->getUserName(), $url)
+                            ->fields([
+                                'Name' => $this->user->getFullName(),
+                                'E-mail' => $this->user->getEmail()
+                            ]);
+                    });
+
             }
         }
     }
